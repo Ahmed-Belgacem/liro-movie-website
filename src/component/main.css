@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(5, 5, 15, 0.93) 0%,
+    rgba(5, 5, 15, 0.75) 38%,
+    rgba(5, 5, 15, 0.2) 65%,
+    rgba(5, 5, 15, 0.05) 100%
+  ),
+  linear-gradient(
+    to top,
+    rgba(5, 5, 15, 0.98) 0%,
+    rgba(5, 5, 15, 0.4) 30%,
+    transparent 60%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 48px 40px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero__badges {
+  display: flex;
+  gap: 8px;
+}
+
+.badge {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.badge--featured {
+  background: #e8003d;
+  color: #fff;
+}
+
+.badge--new {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(168, 85, 247, 0.8);
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.05;
+}
+
+.title__line {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.05;
+}
+
+.title__line--white {
+  font-size: 58px;
+  color: #ffffff;
+}
+
+.title__line--gradient {
+  font-size: 46px;
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 45%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: rgba(220, 220, 240, 0.85);
+}
+
+.meta__percent {
+  color: #22c55e;
+  font-weight: 800;
+}
+
+.meta__match {
+  font-weight: 700;
+}
+
+.meta__tag {
+  border: 1px solid rgba(200, 200, 220, 0.45);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(200, 200, 220, 0.8);
+}
+
+.meta__plain {
+  font-weight: 600;
+}
+
+.hero__genres {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(200, 200, 220, 0.7);
+}
+
+.genre__dot {
+  width: 4px;
+  height: 4px;
+  background: rgba(200, 200, 220, 0.5);
+  border-radius: 50%;
+}
+
+.hero__description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(210, 210, 230, 0.8);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  opacity: 0.88;
+  transform: scale(1.03);
+}
+
+.btn--play {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6, #7c3aed);
+  border-radius: 30px;
+  padding: 10px 22px 10px 16px;
+  min-width: 200px;
+}
+
+.btn__play-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn__play-inner > svg {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.btn__play-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  flex: 1;
+}
+
+.btn__continue {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.btn__progress-bar {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.btn__progress-fill {
+  width: 42%;
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.btn__play-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn--info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(40, 40, 55, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: #e0e0f0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn--info svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn--mute {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(40, 40, 55, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.btn--mute svg {
+  width: 17px;
+  height: 17px;
+}
