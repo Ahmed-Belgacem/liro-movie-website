@@ -1,7 +1,8 @@
 import React from "react";
 import "./navbar.css";
+import ReactStars from 'react-stars'
 
-function Navbar() {
+function Navbar({settext, setrate}) {
   return (
     <nav className="navbar">
       <div className="navbar__left">
@@ -17,12 +18,19 @@ function Navbar() {
       </div>
 
       <div className="navbar__right">
+                  <ReactStars
+  count={5}
+  size={24}
+  color2={'#ffd700'} 
+  onChange={(newRating)=>setrate(newRating)}
+  />
         <div className="navbar__search">
+
           <svg className="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <input type="text" placeholder="Search movies..." className="search__input" />
+          <input type="search" placeholder="Search movies..." className="search__input"  onChange={(e)=>settext(e.target.value)}/>
         </div>
 
         <div className="navbar__bell">
