@@ -245,4 +245,8 @@ body {
 .contentright {
   width: 100%;
 }
+
+.imgleft img{
+      height: 726px !important;
+}
   

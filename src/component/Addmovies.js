@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
 
+
 function Addmovies({ movies, setMovies }) {
   const [show, setShow] = useState(false);
 
