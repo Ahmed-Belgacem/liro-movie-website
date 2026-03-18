@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import ReactStars from 'react-stars'
+import { Link } from "react-router-dom";
 
 function Navbar({settext, setrate}) {
   return (
@@ -8,13 +9,25 @@ function Navbar({settext, setrate}) {
       <div className="navbar__left">
         <div className="navbar__logo">LIROLIRO</div>
 
-        <ul className="navbar__links">
-          <li><a href="/" className="navbar__link navbar__link--active">Home</a></li>
-          <li><a href="/movies" className="navbar__link">Movies</a></li>
-          <li><a href="/tvshows" className="navbar__link">TV Shows</a></li>
-          <li><a href="/anime" className="navbar__link">Anime</a></li>
-          <li><a href="/new" className="navbar__link">New & Popular</a></li>
-        </ul>
+<ul className="navbar__links">
+  <li>
+    <Link to="/" className="navbar__link navbar__link--active" style={{ textDecoration: "none", color: "white" }}>
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link to="/movies" className="navbar__link">Movies</Link>
+  </li>
+  <li>
+    <Link to="/tv" className="navbar__link">TV Shows</Link>
+  </li>
+  <li>
+    <Link to="/anime" className="navbar__link">Anime</Link>
+  </li>
+  <li>
+   <Link to="/new" className="navbar__link">New & Popular</Link>
+  </li>
+</ul>
       </div>
 
       <div className="navbar__right">
